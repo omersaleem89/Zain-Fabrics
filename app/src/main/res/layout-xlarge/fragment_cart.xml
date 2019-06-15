@@ -1,0 +1,177 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent"
+    >
+    <ListView
+        android:id="@+id/cart_listview"
+        android:layout_width="match_parent"
+        android:layout_height="450dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#fff"
+        android:layout_margin="15dp"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@android:color/white">
+
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:padding="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sub Total: "
+                    android:textSize="28sp"
+                    android:textColor="@color/strike"
+                    android:fontFamily="@font/raleway"
+                    android:layout_gravity="center_horizontal"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0000"
+                    android:textSize="28sp"
+                    android:textColor="@color/strike"
+                    android:fontFamily="@font/open_sans"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/cart_textView_sub_total"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:padding="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delivery Charges: "
+                    android:textSize="28sp"
+                    android:textColor="@color/strike"
+                    android:fontFamily="@font/raleway"
+                    android:layout_gravity="center_horizontal"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0000"
+                    android:textSize="28sp"
+                    android:textColor="@color/strike"
+                    android:fontFamily="@font/open_sans"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/cart_textView_delivery_total"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/cart_linear_stitching"
+                android:padding="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stitching Charges: "
+                    android:textSize="28sp"
+                    android:textColor="@color/strike"
+                    android:fontFamily="@font/raleway"
+                    android:layout_gravity="center_horizontal"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0000"
+                    android:textSize="28sp"
+                    android:textColor="@color/strike"
+                    android:fontFamily="@font/open_sans"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/cart_textView_stitching_charges"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:layout_gravity="center"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Net Total: "
+                android:fontFamily="@font/raleway"
+                android:textSize="34sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_gravity="center_horizontal"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0000"
+                android:fontFamily="@font/open_sans"
+                android:textSize="34sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/cart_textView_net_total"/>
+
+        </LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:text="Confirm Order"
+            android:textColor="#fff"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="25dp"
+            android:fontFamily="@font/raleway"
+            android:textSize="30sp"
+            android:background="@drawable/btn_confirm"
+            android:id="@+id/cart_confirm_order_button"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/country_btn"
+            android:text="Continue Shopping"
+            android:fontFamily="@font/raleway"
+            android:textSize="30sp"
+            android:id="@+id/cart_continue_shopping_button"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

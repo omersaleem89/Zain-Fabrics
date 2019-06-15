@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+    <ImageView
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/logo"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Select Country"
+        android:textSize="34sp"
+        android:fontFamily="@font/raleway_medium"
+        android:textColor="@color/strike"
+         />
+
+    <RadioGroup
+        android:id="@+id/radioGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       >
+
+        <RadioButton
+            android:id="@+id/radioButtonUK"
+            android:layout_width="400dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="60dp"
+            android:text="United Kingdom"
+            android:textSize="34sp"
+            android:fontFamily="@font/raleway_medium"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="@drawable/country_radio_bg"
+            android:buttonTint="@color/colorPrimaryDark"
+             />
+
+        <RadioButton
+            android:id="@+id/radioButtonPak"
+            android:layout_width="400dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="70dp"
+            android:text="Pakistan"
+            android:textSize="34sp"
+            android:fontFamily="@font/raleway_medium"
+            android:background="@drawable/country_radio_bg"
+            android:textColor="@color/colorPrimaryDark"
+            android:buttonTint="@color/colorPrimaryDark"
+            />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="400dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="70dp"
+        android:text="Next"
+        android:textSize="30sp"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/raleway_medium"
+        android:background="@drawable/country_btn"
+        />
+</LinearLayout>

@@ -1,0 +1,91 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#FFF"
+    android:layout_height="match_parent">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/home_fragment_nestedScrollView"
+        android:background="#FFF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ss.com.bannerslider.views.BannerSlider
+                android:id="@+id/banner_slider"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="15dp"
+                app:interval="3000"
+                app:loopSlides="true"
+                app:defaultBanner="1"
+                app:animateIndicators="true"
+                app:selected_slideIndicator="@drawable/selected"
+                app:unselected_slideIndicator="@drawable/not_selected"
+                app:indicatorSize="16dp"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#8f8f8f"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"/>
+
+            <TextView
+                android:id="@+id/textView_category_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/raleway"
+                android:text="Categories"
+                android:textColor="@color/colorBlack"
+                android:textSize="26sp" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView_homeFragment"
+                android:layout_width="wrap_content"
+                android:paddingLeft="20dp"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#8f8f8f"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/raleway"
+                android:text="Latest Products"
+                android:textColor="@color/colorBlack"
+                android:textSize="26sp" />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView_home_latest"
+                android:layout_width="wrap_content"
+                android:background="#eaeaea"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

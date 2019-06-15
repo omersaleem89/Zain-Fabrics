@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/main_group"
+        android:checkableBehavior="single"
+        >
+        <item android:id="@+id/menu_home"
+            android:title="HOME"
+            android:icon="@drawable/home"/>
+
+    </group>
+    <group
+        android:id="@+id/main_group2"
+        android:checkableBehavior="single"
+        >
+        <item android:id="@+id/menu_change_country"
+            android:title="CHANGE COUNTRY"
+            android:icon="@drawable/countryicon"/>
+
+
+    </group>
+    <group
+        android:id="@+id/main_group_others"
+        android:checkableBehavior="single"
+        >
+        <item android:id="@+id/menu_share"
+            android:title="SHARE"
+            android:icon="@drawable/share"/>
+        <item android:id="@+id/menu_rate"
+            android:icon="@drawable/rate"
+            android:title="RATE APP"
+            />
+    </group>
+</menu>

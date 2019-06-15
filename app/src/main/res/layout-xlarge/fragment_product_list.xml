@@ -1,0 +1,30 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context="com.example.talal.dresslet.com.example.dresslet.fragments.ProductListFragment">
+
+   <GridView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:numColumns="3"
+       android:layout_margin="15dp"
+       android:background="#fff"
+       android:id="@+id/product_list_gridview"/>
+
+   <ProgressBar
+       android:id="@+id/progressbar3"
+       style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+       android:layout_width="380dp"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/framelauout"
+       android:layout_gravity="center"
+       android:layout_marginTop="-7dp"
+       android:backgroundTint="@color/pink"
+       android:indeterminate="true"
+       android:indeterminateTint="@color/colorPrimaryDark"
+       android:max="100" />
+
+
+</FrameLayout>

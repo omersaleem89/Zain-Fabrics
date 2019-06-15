@@ -1,0 +1,522 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#fff"
+        >
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:background="#fff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linear_layout_inside_scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardView_productInfo"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="15dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/linear_layout_inside_cardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        <ProgressBar
+                            android:id="@+id/product_info_progress"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:visibility="visible"
+                            android:layout_gravity="center"/>
+                        <com.github.chrisbanes.photoview.PhotoView
+                            android:id="@+id/photo_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="750dp"
+                            android:layout_marginLeft="@dimen/std_horizontal_margin"
+                            android:layout_marginRight="@dimen/std_horizontal_margin"
+                            android:scaleType="fitXY"
+                            android:layout_marginTop="@dimen/std_horizontal_margin"
+                            android:layout_marginBottom="@dimen/margin_2dp"
+                            app:srcCompat="@drawable/testing"/>
+                        </FrameLayout>
+                        <LinearLayout
+                            android:layout_weight="5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginTop="10dp">
+
+                            <ImageView
+                                android:id="@+id/product_info_main_image_thumb"
+                                android:layout_width="90dp"
+                                android:layout_height="120dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/testing"
+                                android:layout_marginRight="10dp"/>
+
+                            <ImageView
+                                android:id="@+id/product_info_other_image_thumb"
+                                android:layout_width="90dp"
+                                android:layout_height="120dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/testing"
+                                android:layout_marginLeft="10dp"/>
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="@dimen/std_horizontal_margin"
+                            android:layout_marginRight="@dimen/std_horizontal_margin"
+                            android:layout_marginTop="@dimen/margin_8dp"
+                            android:background="#808080" />
+
+                        <TextView
+                            android:id="@+id/product_info_product_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/margin_5dp"
+                            android:layout_marginLeft="@dimen/std_horizontal_margin"
+                            android:layout_marginRight="@dimen/std_horizontal_margin"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/open_sans"
+                            android:minLines="1"
+                            android:text="Dummy text for the image title "
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/std_textSize" />
+
+
+
+                        <LinearLayout
+                            android:id="@+id/linear_layout_suit_images"
+                            android:layout_width="match_parent"
+                            android:weightSum="10"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="5dp"
+                            android:padding="@dimen/padding_3dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:gravity="start|center_vertical"
+                                android:layout_gravity="start|center_vertical"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/product_info_product_sale_price"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:background="@drawable/strike_thru"
+                                    android:fontFamily="@font/open_sans"
+                                    android:text="Sale Price"
+                                    android:textColor="@color/strike"
+                                    android:textSize="22sp" />
+
+
+                                <TextView
+                                    android:id="@+id/product_info_product_price"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/open_sans"
+                                    android:text="Rs. 12000/-"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:textSize="28sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_weight="5"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center"
+                                android:layout_marginRight="10dp">
+                                <TextView
+                                    android:id="@+id/label_quantity"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Select Quantity"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="22sp"
+                                    android:layout_margin="5dp"
+                                    android:fontFamily="@font/open_sans"/>
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:gravity="center"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+
+
+                                    <Button
+                                        android:id="@+id/btn_minus"
+                                        android:text="-"
+                                        android:textSize="24sp"
+                                        android:textColor="#fff"
+                                        android:fontFamily="@font/open_sans"
+                                        android:background="@drawable/btn_minus"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp" />
+
+                                    <TextView
+                                        android:id="@+id/textView_quantity"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:text="0"
+                                        android:textAlignment="center"
+                                        android:background="@drawable/quantity_text"
+                                        android:fontFamily="@font/open_sans"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="24sp"/>
+
+                                    <Button
+                                        android:id="@+id/btn_add"
+                                        android:text="+"
+                                        android:textSize="24sp"
+                                        android:fontFamily="@font/open_sans"
+                                        android:textColor="#fff"
+                                        android:background="@drawable/btn_order"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp" />
+
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+
+
+                </android.support.v7.widget.CardView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="#fff"
+                    android:layout_marginBottom="15dp"
+                    android:weightSum="3">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:layout_weight="2">
+
+                        <Button
+                            android:id="@+id/btn_buy_now"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btn_buy"
+                            android:fontFamily="@font/raleway"
+                            android:text="Buy Now"
+                            android:textSize="18sp"
+                            android:textColor="#fff"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/btn_order"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btn_order"
+                            android:fontFamily="@font/raleway"
+                            android:text="Add to Cart"
+                            android:textSize="18sp"
+                            android:textAlignment="center"
+                            android:textColor="#fff"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/std_vertical_margin">
+
+                    <LinearLayout
+                        android:paddingTop="@dimen/margin_5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/std_horizontal_margin"
+                            android:layout_marginTop="@dimen/margin_8dp"
+                            android:text="Details"
+                            android:textStyle="bold"
+                            android:textSize="22sp"
+                            android:fontFamily="@font/raleway"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/std_horizontal_margin"
+                                android:layout_marginRight="@dimen/std_horizontal_margin"
+                                android:layout_marginTop="@dimen/margin_5dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Code: "
+                                    android:textStyle="bold"
+                                    android:textSize="18sp"
+                                    android:layout_margin="5dp"
+                                    android:fontFamily="@font/raleway"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Shirt: "
+                                    android:textStyle="bold"
+                                    android:layout_margin="5dp"
+                                    android:textSize="18sp"
+                                    android:fontFamily="@font/raleway"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Trouser: "
+                                    android:textStyle="bold"
+                                    android:layout_margin="5dp"
+                                    android:textSize="18sp"
+                                    android:fontFamily="@font/raleway"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Dupatta:"
+                                    android:layout_margin="5dp"
+                                    android:textStyle="bold"
+                                    android:textSize="18sp"
+                                    android:fontFamily="@font/raleway"/>
+                                <TextView
+                                    android:id="@+id/product_info_textView_type"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Type: "
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/raleway"/>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/std_horizontal_margin"
+                                android:layout_marginRight="@dimen/std_horizontal_margin"
+                                android:layout_marginTop="@dimen/margin_5dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/product_info_textView_product_code"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Khaadi"
+                                    android:textSize="16sp"
+                                    android:layout_margin="5dp"
+                                    android:fontFamily="@font/open_sans"/>
+
+                                <TextView
+                                    android:id="@+id/product_info_textView_product_shirt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/open_sans"
+                                    android:layout_margin="5dp"
+                                    android:textSize="16sp"
+                                    android:text="7e27c" />
+
+                                <TextView
+                                    android:id="@+id/product_info_textView_product_trouser"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/open_sans"
+                                    android:textSize="16sp"
+                                    android:layout_margin="5dp"
+                                    android:text="Product featues:" />
+                                <TextView
+                                    android:id="@+id/product_info_textView_product_dupatta"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="16sp"
+                                    android:fontFamily="@font/open_sans"
+                                    android:layout_margin="5dp"
+                                    android:text="Product featues:" />
+                                <Spinner
+                                    android:layout_width="150dp"
+                                    android:layout_height="35dp"
+                                    android:textSize="15sp"
+                                    android:entries="@array/type_arrays"
+                                    android:prompt="@string/type_prompt"
+                                    android:id="@+id/spinner"
+                                    />
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:weightSum="5"
+                    android:background="#fff"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:text="Related Products"
+                        android:layout_marginLeft="@dimen/std_horizontal_margin"
+                        android:textColor="@color/strike"
+                        android:textSize="22sp"
+                        android:layout_weight="4.5"
+                        android:layout_marginTop="@dimen/margin_5dp"
+                        android:layout_marginBottom="@dimen/margin_2dp"
+                        android:fontFamily="@font/raleway_medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/textView_productInfo_relatedProducts_seeall"
+                        android:text="See all"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/std_horizontal_margin"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/heading_textSize"
+                        android:fontFamily="@font/raleway_medium"
+                        android:layout_marginTop="@dimen/margin_5dp"
+                        android:layout_marginBottom="@dimen/margin_2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView_productInfo_relatedProducts"
+                    android:layout_width="wrap_content"
+                    android:background="@color/bgColor"
+                    android:layout_marginLeft="15dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"/>
+
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
+    <com.github.clans.fab.FloatingActionMenu
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:menu_icon="@drawable/chat"
+        app:menu_colorNormal="@color/pink"
+        app:menu_colorPressed="@color/pink"
+        app:menu_colorRipple="#99FFFFFF"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="15dp"
+        app:menu_labels_padding="10dp"
+        app:menu_labels_textColor="#444444"
+        app:menu_labels_textSize="14sp"
+        app:menu_labels_cornerRadius="25dp"
+        app:menu_labels_colorNormal="#fff"
+        app:menu_labels_colorPressed="#444444"
+        app:menu_labels_colorRipple="#66FFFFFF"
+        app:menu_labels_showShadow="true"
+        app:menu_fab_label="Exit"
+        >
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/menu_item_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/share_icon"
+            app:fab_size="mini"
+            app:fab_label="Share it!" />
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/menu_item_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/call"
+            app:fab_size="mini"
+            app:fab_label="Call" />
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/menu_item_messages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/msg"
+            app:fab_size="mini"
+            app:fab_label="Message" />
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/menu_item_whatsapp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/whatsapp"
+            app:fab_size="mini"
+            app:fab_label="Whatsapp" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+</FrameLayout>
